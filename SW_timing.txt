@@ -1,0 +1,106 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'SW' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : SW
+Version: R-2020.09-SP5
+Date   : Fri Jun 10 01:36:12 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: index_i_reg[0][3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pos_query_r_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SW                 tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  index_i_reg[0][3]/CK (DFFRX1)            0.00 #     1.00 r
+  index_i_reg[0][3]/QN (DFFRX1)            0.62       1.62 r
+  U6632/Y (NAND2X1)                        0.33       1.95 f
+  U6417/Y (INVX3)                          0.44       2.39 r
+  U7297/Y (NAND3X1)                        0.14       2.53 f
+  U7296/Y (CLKBUFX3)                       0.52       3.05 f
+  U6416/Y (NOR2X1)                         0.58       3.63 r
+  U7295/Y (NAND3X1)                        0.36       3.99 f
+  U7608/Y (NAND2X1)                        0.20       4.19 r
+  U7607/Y (AOI211X1)                       0.20       4.38 f
+  U7606/Y (CLKBUFX3)                       0.59       4.98 f
+  U9483/Y (OAI21XL)                        0.34       5.32 r
+  U6324/Y (OAI21X1)                        0.30       5.63 f
+  PE1/I_u[0] (PE_0)                        0.00       5.63 f
+  PE1/U41/Y (OR2X1)                        0.32       5.95 f
+  PE1/U110/Y (OR2X1)                       0.28       6.23 f
+  PE1/U112/Y (OR2X1)                       0.29       6.52 f
+  PE1/U114/Y (NOR2X1)                      0.35       6.86 r
+  PE1/U12/Y (OAI21X1)                      0.22       7.09 f
+  PE1/U153/Y (OAI222XL)                    0.57       7.65 r
+  PE1/U154/Y (OAI222XL)                    0.25       7.90 f
+  PE1/U165/Y (AO22X1)                      0.30       8.20 f
+  PE1/U16/Y (OAI21X2)                      0.35       8.54 r
+  PE1/U289/Y (MXI2X1)                      0.42       8.96 r
+  PE1/U276/Y (CLKINVX1)                    0.35       9.31 f
+  PE1/U171/Y (NAND2BX1)                    0.27       9.58 r
+  PE1/U175/Y (AND2X1)                      0.24       9.82 r
+  PE1/U176/Y (OAI211X1)                    0.13       9.95 f
+  PE1/U178/Y (AOI31X1)                     0.21      10.16 r
+  PE1/U183/Y (AOI211X1)                    0.13      10.28 f
+  PE1/U184/Y (NOR3BXL)                     0.34      10.63 r
+  PE1/U20/Y (CLKINVX1)                     0.14      10.77 f
+  PE1/U187/Y (AOI31X1)                     0.18      10.94 r
+  PE1/U188/Y (CLKINVX1)                    0.11      11.05 f
+  PE1/U294/Y (NAND3BX1)                    0.27      11.32 r
+  PE1/U23/Y (INVX3)                        0.22      11.54 f
+  PE1/U17/Y (AOI31XL)                      0.37      11.91 r
+  PE1/U14/Y (NAND4X2)                      0.34      12.25 f
+  PE1/U3/Y (OAI221X1)                      0.57      12.82 r
+  PE1/H[4] (PE_0)                          0.00      12.82 r
+  U6382/Y (NAND2BXL)                       0.24      13.06 f
+  U13358/Y (OAI222XL)                      0.58      13.64 r
+  U13359/Y (OAI222XL)                      0.25      13.89 f
+  U13369/Y (AO22X1)                        0.29      14.18 f
+  U6380/Y (OAI21X1)                        0.30      14.48 r
+  U7132/Y (NOR3X1)                         0.28      14.76 f
+  U6373/Y (NOR3BX1)                        0.27      15.03 f
+  U7136/Y (NOR3BX1)                        0.26      15.29 f
+  U7055/Y (AND4X1)                         0.25      15.54 f
+  U6378/Y (NOR3BX1)                        0.22      15.76 f
+  U7135/Y (NOR3BX1)                        0.28      16.03 f
+  U7149/Y (AOI31X1)                        0.56      16.59 r
+  U7148/Y (CLKBUFX3)                       0.46      17.05 r
+  U9524/Y (OAI22XL)                        0.17      17.22 f
+  U9523/Y (AOI221XL)                       0.37      17.59 r
+  U7688/Y (NAND4X1)                        0.15      17.74 f
+  pos_query_r_reg[3]/D (DFFRX1)            0.00      17.74 f
+  data arrival time                                  17.74
+
+  clock clk (rise edge)                   24.00      24.00
+  clock network delay (ideal)              1.00      25.00
+  clock uncertainty                       -0.10      24.90
+  pos_query_r_reg[3]/CK (DFFRX1)           0.00      24.90 r
+  library setup time                      -0.11      24.79
+  data required time                                 24.79
+  -----------------------------------------------------------
+  data required time                                 24.79
+  data arrival time                                 -17.74
+  -----------------------------------------------------------
+  slack (MET)                                         7.05
+
+
